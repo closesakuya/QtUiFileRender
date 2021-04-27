@@ -178,6 +178,7 @@ class QtUiObject:
                     yield sub_j
 
 
+"""
 if __name__ == "__main__":
     with open("sysset.ui", "r+", encoding="utf-8") as f:
         s = f.read()
@@ -196,7 +197,7 @@ if __name__ == "__main__":
 
             # print(style.to_string())
             style.dump("heihei.txt")
-
+"""
 
 
 

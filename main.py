@@ -25,14 +25,15 @@ def get_valid_dir_name(dir_input: str):
     return dir_input
 
 
-def yield_all_ui(dir_name: str):
+def yield_all_ui(dir_name: str, current_dir: str = ""):
     for item in os.listdir(dir_name):
+        print(item, os.path.isfile(item))
         if os.path.isdir(item):
-            for sub_item in yield_all_ui(item):
+            current_dir += (item + os.sep)
+            for sub_item in yield_all_ui(item, current_dir):
                 yield sub_item
-        elif os.path.isfile(item):
-            if os.path.splitext(item)[1] == ".ui":
-                yield item
+        elif os.path.splitext(item)[1] == ".ui":
+            yield current_dir + item
         else:
             # print("not support type, ", item)
             pass
@@ -78,7 +79,7 @@ def renderall(file_dir: str, stylesheet: str, output: str):
     assert os.path.isfile(stylesheet)
     output = get_valid_dir_name(output)
     rd = render.Render(stylesheet)
-    gen = yield_all_ui(file_dir)
+    gen = yield_all_ui(file_dir, file_dir.replace(os.sep, "") + os.sep)
     for idx, item in enumerate(gen):
         if rd.do_render(src=item, dst=output + os.sep + os.path.split(item)[1]):
             click.echo("success({0})!".format(idx + 1))

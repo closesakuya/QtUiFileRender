@@ -1,0 +1,3903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SysSet</class>
+ <widget class="QWidget" name="SysSet">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>系统设置</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color: #FFFFFF;
+}
+QWidget:focus{
+	outline:none;
+}</string>
+  </property>
+  <widget class="QPushButton" name="m_QuerityCtrlBtn">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>65</y>
+     <width>203</width>
+     <height>83</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>BTN_02</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #2B87D8;
+color: #FFFFFF;
+font: bold 20px Simhei;
+border: 0px solid #C0C0C0; 
+border-radius: 0px; 
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+QPushButton:pressed
+{
+background-color: #2B87D8;
+color: #FFFFFF;
+ 
+}</string>
+   </property>
+   <property name="text">
+    <string>质控参数</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../res_yz.qrc">
+     <normaloff>:/images/pic_QuerityCtrlSel.png</normaloff>:/images/pic_QuerityCtrlSel.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>56</width>
+     <height>64</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>65</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>TITLE</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#frame{
+background-color: transparent;
+border-image:url(:/images/title_background_02.png);
+color: #FFFFFF;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="m_TitleName">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>200</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>LBL_01_SP</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: #FFFFFF;
+font:bold 22px Semhei; </string>
+    </property>
+    <property name="text">
+     <string>系统设置</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="m_TitleProductName">
+    <property name="geometry">
+     <rect>
+      <x>454</x>
+      <y>2</y>
+      <width>176</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>LBL_01_SP</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: #FFFFFF;</string>
+    </property>
+    <property name="text">
+     <string>SmartWapTMCOD在线分析仪</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="m_TitleTime">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>200</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="whatsThis">
+     <string>LBL_01_SP</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font:18px Ubuntu;
+background-color: transparent;
+color: #FFFFFF;</string>
+    </property>
+    <property name="text">
+     <string>2017-08-01 00:00:00</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="m_SysSetBtn">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>148</y>
+     <width>200</width>
+     <height>83</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>BTN_02</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	background-color: #2B87D8;
+	color: #FFFFFF;
+
+	font: bold 20px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #2B87D8;
+color: #FFFFFF;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>系统设置</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../res_yz.qrc">
+     <normaloff>:/images/pic_SysSetUSel.png</normaloff>:/images/pic_SysSetUSel.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>56</width>
+     <height>64</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="m_CombinedControlBtn">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>231</y>
+     <width>200</width>
+     <height>82</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>BTN_02</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: #2B87D8;
+color: #FFFFFF;
+
+	font: bold 20px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #2B87D8;
+color: #FFFFFF;
+ 
+}</string>
+   </property>
+   <property name="text">
+    <string>联动控制</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../res_yz.qrc">
+     <normaloff>:/images/pic_OnlineTestUSel.png</normaloff>:/images/pic_OnlineTestUSel.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>56</width>
+     <height>64</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="m_AiMaintainBtn">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>313</y>
+     <width>200</width>
+     <height>82</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>BTN_02</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: #2B87D8;
+color: #FFFFFF;
+	font: bold 20px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #2B87D8;
+color: #FFFFFF; 
+}</string>
+   </property>
+   <property name="text">
+    <string>智慧运营</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../res_yz.qrc">
+     <normaloff>:/images/pic_DataNetUSel.png</normaloff>:/images/pic_DataNetUSel.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>56</width>
+     <height>64</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="m_RtnHomeBtn">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>396</y>
+     <width>200</width>
+     <height>82</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>BTN_01</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: #304961;
+color: #FFFFFF;
+	font: bold 20px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+   </property>
+   <property name="text">
+    <string>返回首页</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../res_yz.qrc">
+     <normaloff>:/images/pic_RtnHome.png</normaloff>:/images/pic_RtnHome.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>23</width>
+     <height>23</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="m_MainSetTab">
+   <property name="geometry">
+    <rect>
+     <x>208</x>
+     <y>65</y>
+     <width>427</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget#m_MainSetTab:tab-bar
+{
+	height: 0px;
+}
+
+QTabBar#m_MainSetTab::tab
+{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 0px;
+}
+
+QTabWidget#m_MainSetTab::pane
+{
+	border-width: 1px;
+	border-left-color: #FFFFFF;
+	border-style: solid;
+	background: transparent;
+	top: -2.3em;
+}
+
+QWidget
+{
+  background-color: white;
+}
+
+</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab1_1">
+    <attribute name="title">
+     <string>Tab 1</string>
+    </attribute>
+    <widget class="QTabWidget" name="m_SysSetTab">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>7</y>
+       <width>427</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Aharoni</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::pane
+{
+	border-width:1px;
+	border-top-color:#FFFFFF;
+	border-left-color:#FFFFFF;
+	border-style: outset;
+	background-color: white;
+	background: transparent;
+}
+QWidget
+{
+  background-color: white;
+}
+
+QTabBar::tab
+{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    max-width: 141px; 
+	min-width:141px; 
+	min-height:45px;
+    font:16px  Semhei;
+    padding: 0px;
+	border-right: 1px solid white;
+}
+
+QTabBar::tab:selected
+{
+	color: white;
+	background-color:#2B87D8;
+}
+
+QTabBar::tab:!selected
+{
+	color: white;
+	background-color:#6C8193;
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="m_CuurentRangeTab">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <attribute name="title">
+       <string>当前量程</string>
+      </attribute>
+      <widget class="QTableWidget" name="m_TestRangeTab">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>3</y>
+         <width>425</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>TAB_01</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTableWidget::item
+{
+	border: 1px solid ;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: rgb(0, 0, 0);
+}
+
+QTableWidget
+{
+	/*background-color:rgb(240,240,240);*/
+	border:0px;
+	color:#304961;
+	font:20px Semhei;
+}
+/*
+QTableWidget::Item::selected
+{
+	background-color:lightblue;
+	color:blue;
+}*/</string>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>false</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::NoSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="textElideMode">
+        <enum>Qt::ElideNone</enum>
+       </property>
+       <property name="showGrid">
+        <bool>false</bool>
+       </property>
+       <property name="gridStyle">
+        <enum>Qt::SolidLine</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="rowCount">
+        <number>4</number>
+       </property>
+       <property name="columnCount">
+        <number>2</number>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderDefaultSectionSize">
+        <number>51</number>
+       </attribute>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <column>
+        <property name="text">
+         <string>时间</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>事件</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QPushButton" name="m_RangeAutomaticSettingsBtn">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>289</y>
+         <width>181</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>BTN_01</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+background-color: #304961;
+color: #FFFFFF;
+	font:18px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #304961;
+color: #FFFFFF; 
+}</string>
+       </property>
+       <property name="text">
+        <string>量程自动切换设置</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="m_ReactionParamTab">
+      <attribute name="title">
+       <string>反应参数</string>
+      </attribute>
+      <widget class="QLabel" name="m_DispelTime">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>130</y>
+         <width>126</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel
+{
+	padding:1px 10px 1px 1px;
+	font:20px Semhei;
+background-color: transparent;
+color: #304961;
+	image: url(:/images/pic_Right-Arrow.png);
+	image-position:right;
+}</string>
+       </property>
+       <property name="text">
+        <string>900 秒</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="Line" name="line2_2_2">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>155</y>
+         <width>260</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_DispelTemperature">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>70</y>
+         <width>126</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel
+{
+	padding:1px 10px 1px 1px;
+	font:20px Semhei;
+background-color: transparent;
+color: #304961;
+	image: url(:/images/pic_Right-Arrow.png);
+	image-position:right;
+}</string>
+       </property>
+       <property name="text">
+        <string>165 度</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="CurTitle2_2_1">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>60</y>
+         <width>96</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:20px Semhei;
+background-color: transparent;
+color: #304961;</string>
+       </property>
+       <property name="text">
+        <string>消解温度</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line2_2_3">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>215</y>
+         <width>260</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="CurTitle2_2_2">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>120</y>
+         <width>96</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:20px Semhei;
+background-color: transparent;
+color: #304961;</string>
+       </property>
+       <property name="text">
+        <string>消解时间</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="CurTitle2_2_3">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>180</y>
+         <width>96</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:20px Semhei;
+background-color: transparent;
+color: #304961;</string>
+       </property>
+       <property name="text">
+        <string>显色温度</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line2_2_1">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>95</y>
+         <width>260</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_ColoredTime">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>250</y>
+         <width>126</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel
+{
+	padding:1px 10px 1px 1px;
+	font:20px Semhei;
+background-color: transparent;
+color: #304961;
+	image: url(:/images/pic_Right-Arrow.png);
+	image-position:right;
+}</string>
+       </property>
+       <property name="text">
+        <string>180 秒</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="Line" name="line2_2_4">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>275</y>
+         <width>260</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="CurTitle2_2_4">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>240</y>
+         <width>96</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:20px Semhei;
+background-color: transparent;
+color: #304961;</string>
+       </property>
+       <property name="text">
+        <string>显色时间</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_ColoredTemperature">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>190</y>
+         <width>126</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel
+{
+	padding:1px 10px 1px 1px;
+	font:20px Semhei;
+background-color: transparent;
+color: #304961;
+	image: url(:/images/pic_Right-Arrow.png);
+	image-position:right;
+}</string>
+       </property>
+       <property name="text">
+        <string>40 度</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="m_KBValueTab">
+      <attribute name="title">
+       <string>标准曲线参数</string>
+      </attribute>
+      <widget class="QPushButton" name="m_CurveCompensateBtn">
+       <property name="geometry">
+        <rect>
+         <x>118</x>
+         <y>305</y>
+         <width>194</width>
+         <height>43</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>BTN_01</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+background-color: #304961;
+color: #FFFFFF;
+	font:18px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+       </property>
+       <property name="text">
+        <string>曲线补偿参数</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label2_3_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>45</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;
+font:20px Semhei;</string>
+       </property>
+       <property name="text">
+        <string>B值</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label2_3_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>10</y>
+         <width>45</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Semhei</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;
+font:20px Semhei;</string>
+       </property>
+       <property name="text">
+        <string>K值</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_range_1_name">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>241</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Semhei</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;;font:16px Semhei;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_range_2_name">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>241</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Semhei</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;;font:16px Semhei;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_range_3_name">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>202</y>
+         <width>241</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Semhei</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;;font:16px Semhei;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_range_4_name">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>252</y>
+         <width>241</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Semhei</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;;font:16px Semhei;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_CurbValueLbl">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>10</y>
+         <width>145</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;
+font:22px Semhei;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_CurkValueLbl">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>10</y>
+         <width>145</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Semhei</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;
+font:22px Semhei;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_range_1_value">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>90</y>
+         <width>120</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Semhei</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;font:16px Semhei;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_range_2_value">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>140</y>
+         <width>120</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Semhei</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;;font:16px Semhei;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_range_3_value">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>190</y>
+         <width>120</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Semhei</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;;font:16px Semhei;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="m_range_4_value">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>240</y>
+         <width>120</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Semhei</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>LBL_02</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: #304961;;font:16px Semhei;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="Line" name="line2_3_1">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>0</y>
+         <width>1</width>
+         <height>83</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line2_3_2">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>83</y>
+         <width>415</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line2_3_3">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>134</y>
+         <width>415</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line2_3_4">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>185</y>
+         <width>415</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line2_3_5">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>236</y>
+         <width>415</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line2_3_6">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>287</y>
+         <width>415</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="m_SystemSettingsTab">
+    <attribute name="title">
+     <string>Tab 2</string>
+    </attribute>
+    <widget class="QToolButton" name="m_DataRecoveryBtn">
+     <property name="geometry">
+      <rect>
+       <x>231</x>
+       <y>8</y>
+       <width>194</width>
+       <height>68</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton
+{
+	border: 1px solid white;	
+	font:16px Semhei;
+	/*border-color: rgb(255, 255, 255);*/
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+     </property>
+     <property name="text">
+      <string>系统文件维护</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res_yz.qrc">
+       <normaloff>:/images/pic_SystemUpdate.png</normaloff>:/images/pic_SystemUpdate.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+     <property name="arrowType">
+      <enum>Qt::NoArrow</enum>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="m_ScreenCalibrationBtn">
+     <property name="geometry">
+      <rect>
+       <x>231</x>
+       <y>76</y>
+       <width>194</width>
+       <height>68</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton
+{
+	border:1px solid white;	
+	font:16px Semhei;
+	/*border-color: rgb(255, 255, 255);*/
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+     </property>
+     <property name="text">
+      <string>触摸屏设置</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res_yz.qrc">
+       <normaloff>:/images/pic_TouchScrcalibrate.png</normaloff>:/images/pic_TouchScrcalibrate.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+     <property name="arrowType">
+      <enum>Qt::NoArrow</enum>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="m_DeviceInfoBtn">
+     <property name="geometry">
+      <rect>
+       <x>231</x>
+       <y>144</y>
+       <width>194</width>
+       <height>68</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton
+{
+	border:1px solid white;	
+	font:16px Semhei;
+	/*border-color: rgb(255, 255, 255);*/
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+     </property>
+     <property name="text">
+      <string>仪器信息</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res_yz.qrc">
+       <normaloff>:/images/pic_DeviceInfo.png</normaloff>:/images/pic_DeviceInfo.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+     <property name="arrowType">
+      <enum>Qt::NoArrow</enum>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="m_SystemRecoveryBtn">
+     <property name="geometry">
+      <rect>
+       <x>231</x>
+       <y>212</y>
+       <width>194</width>
+       <height>68</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton
+{
+	border:1px solid white;	
+	font:16px Semhei;
+	/*border-color: rgb(255, 255, 255);*/
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+     </property>
+     <property name="text">
+      <string>仪器初始化</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res_yz.qrc">
+       <normaloff>:/images/pic_DeviceIni.png</normaloff>:/images/pic_DeviceIni.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+     <property name="arrowType">
+      <enum>Qt::NoArrow</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="title1bg_2">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>160</y>
+       <width>231</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-style:solid;
+border-bottom-width: 1px;
+border-bottom-color:rgb(219, 217, 220);
+border-top-width: 1px;
+border-top-color:rgb(219, 217, 220);
+background: transparent;
+background-color: transparent;
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <widget class="QPushButton" name="m_UpdatePasswordBtn">
+      <property name="geometry">
+       <rect>
+        <x>125</x>
+        <y>2</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="whatsThis">
+       <string>BTN_01</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+background-color: #304961;
+color: #FFFFFF;
+	font:18px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+      </property>
+      <property name="text">
+       <string>更新密码</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="title1bg_3">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>360</y>
+       <width>231</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-style:solid;
+border-bottom-width: 1px;
+border-bottom-color:rgb(219, 217, 220);
+border-top-width: 1px;
+border-top-color:rgb(219, 217, 220);
+background: transparent;
+background-color: transparent;
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <widget class="QPushButton" name="m_UpdateDatetimeBtn">
+      <property name="geometry">
+       <rect>
+        <x>104</x>
+        <y>2</y>
+        <width>121</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="whatsThis">
+       <string>BTN_01</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+background-color: #304961;
+color: #FFFFFF;
+	font:18px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #304961;
+color: #FFFFFF;  
+}</string>
+      </property>
+      <property name="text">
+       <string>设置系统时间</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="Line" name="line1_2_1">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>80</y>
+       <width>223</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line1_2_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>280</y>
+       <width>223</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_2_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>71</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>新 密 码：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_2_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>76</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>密码确认：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_2_5">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>210</y>
+       <width>71</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>日   期：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_2_6">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>290</y>
+       <width>71</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>时   间：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_NewPassword">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>10</y>
+       <width>131</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(237, 177, 14);
+font:16px Semhei;
+border: 0px; 
+background: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_ConfirmPassword">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>90</y>
+       <width>131</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(237, 177, 14);
+font:16px Semhei;
+border: 0px; 
+background: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="m_SystemDate">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>210</y>
+       <width>135</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	padding:1px 10px 1px 1px;
+	color: rgb(237, 177, 14);
+	font:20px Ubuntu;
+	background: transparent;
+}</string>
+     </property>
+     <property name="text">
+      <string>2015-9-20</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="m_SystemTime">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>290</y>
+       <width>135</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	padding:1px 10px 1px 1px;
+	color: rgb(237, 177, 14);
+	font:20px Ubuntu;
+	background: transparent;
+}</string>
+     </property>
+     <property name="text">
+      <string>12:30</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="m_SystemTime_2">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>10</y>
+       <width>20</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	padding:1px 10px 1px 1px;
+	color: rgb(237, 177, 14);
+	font: 16pt Arial;
+	background: transparent;
+	image: url(:/images/pic_Right-Arrow.png);
+	image-position:right;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="m_SystemTime_3">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>90</y>
+       <width>20</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	padding:1px 10px 1px 1px;
+	color: rgb(237, 177, 14);
+	font: 16pt Arial;
+	background: transparent;
+	image: url(:/images/pic_Right-Arrow.png);
+	image-position:right;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="m_UpdateDongleBtn">
+     <property name="geometry">
+      <rect>
+       <x>231</x>
+       <y>280</y>
+       <width>194</width>
+       <height>68</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton
+{
+	border:1px solid white;	
+	font:16px Semhei;
+	/*border-color: rgb(255, 255, 255);*/
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+     </property>
+     <property name="text">
+      <string>加密锁更新</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res_yz.qrc">
+       <normaloff>:/images/pic_ProductLicense.png</normaloff>:/images/pic_ProductLicense.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+     <property name="arrowType">
+      <enum>Qt::NoArrow</enum>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="m_UpdateOnlineBtn">
+     <property name="geometry">
+      <rect>
+       <x>231</x>
+       <y>348</y>
+       <width>194</width>
+       <height>68</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton
+{
+	border:1px solid white;	
+	font:16px Semhei;
+	/*border-color: rgb(255, 255, 255);*/
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+     </property>
+     <property name="text">
+      <string>在线升级</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res_yz.qrc">
+       <normaloff>:/images/pic_UResumeData.png</normaloff>:/images/pic_UResumeData.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonTextBesideIcon</enum>
+     </property>
+     <property name="arrowType">
+      <enum>Qt::NoArrow</enum>
+     </property>
+    </widget>
+    <zorder>m_DataRecoveryBtn</zorder>
+    <zorder>m_ScreenCalibrationBtn</zorder>
+    <zorder>m_DeviceInfoBtn</zorder>
+    <zorder>m_SystemRecoveryBtn</zorder>
+    <zorder>title1bg_2</zorder>
+    <zorder>title1bg_3</zorder>
+    <zorder>line1_2_1</zorder>
+    <zorder>line1_2_2</zorder>
+    <zorder>label1_2_2</zorder>
+    <zorder>label1_2_3</zorder>
+    <zorder>label1_2_5</zorder>
+    <zorder>label1_2_6</zorder>
+    <zorder>m_SystemDate</zorder>
+    <zorder>m_SystemTime</zorder>
+    <zorder>m_SystemTime_2</zorder>
+    <zorder>m_SystemTime_3</zorder>
+    <zorder>m_ConfirmPassword</zorder>
+    <zorder>m_NewPassword</zorder>
+    <zorder>m_UpdateDongleBtn</zorder>
+    <zorder>m_UpdateOnlineBtn</zorder>
+   </widget>
+   <widget class="QWidget" name="m_CombinedControlTab">
+    <attribute name="title">
+     <string>页</string>
+    </attribute>
+    <widget class="QLabel" name="m_DTUSwitchLbl">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>219</x>
+       <y>195</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>DTU接口</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>195</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>微   打</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>4-20mA</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_7">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>85</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>通讯地址</string>
+     </property>
+    </widget>
+    <widget class="CQComboBox" name="m_AgreementCbo">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>30</y>
+       <width>315</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font:16px;</string>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>请选择协议</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>协议-1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>协议-2</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label1_3_2">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>140</y>
+       <width>146</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>20mA对应的浓度值</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_TestBtn">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>360</y>
+       <width>86</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+background-color: #304961;
+color: #FFFFFF;
+	font:18px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+     </property>
+     <property name="text">
+      <string>输出测试</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line1_3_1">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>20</y>
+       <width>415</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_420ConcentrationValue">
+     <property name="geometry">
+      <rect>
+       <x>309</x>
+       <y>140</y>
+       <width>96</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>4.00 mg/L</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_TestValueInput">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>360</y>
+       <width>101</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_1">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>串口协议</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_420SwitchBtn">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>140</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	border-radius: 15px;
+	image: url(:/images/pic_Close.png);
+}
+
+QPushButton:checked
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	image: url(:/images/pic_Open.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_printSwitchBtn">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>195</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	border-radius: 15px;
+	image: url(:/images/pic_Close.png);
+}
+
+QPushButton:checked
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	image: url(:/images/pic_Open.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_DTUSwitchBtn">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>195</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	border-radius: 15px;
+	image: url(:/images/pic_Close.png);
+}
+
+QPushButton:checked
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	image: url(:/images/pic_Open.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="CQComboBox" name="m_DataTypeComb">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>360</y>
+       <width>180</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font:16px Semhei;</string>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>在线测量值</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>质控样</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>空白样</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>B值</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>K值</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="Line" name="line1_3_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>130</y>
+       <width>415</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line1_3_4">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>185</y>
+       <width>415</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line1_3_5">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>240</y>
+       <width>415</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line1_3_6">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>295</y>
+       <width>415</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_CompunicationAddress">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>85</y>
+       <width>136</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>01000101010</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_13">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>250</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>加标回收</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_AddingStandardRecoverySwitchBtn">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>250</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	border-radius: 15px;
+	image: url(:/images/pic_Close.png);
+}
+
+QPushButton:checked
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	image: url(:/images/pic_Open.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_14">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>300</y>
+       <width>70</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>报警/留样</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_WarningSwitchBtn">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>300</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	border-radius: 15px;
+	image: url(:/images/pic_Close.png);
+}
+
+QPushButton:checked
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	image: url(:/images/pic_Open.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_15">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>300</y>
+       <width>51</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>下限值</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_16">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>300</y>
+       <width>51</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+background-color: transparent;
+color: #304961;
+font:16px Semhei;</string>
+     </property>
+     <property name="text">
+      <string>上限值</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_WarningLimitMinValue">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>300</y>
+       <width>65</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>30</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_WarningLimitMaxValue">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>300</y>
+       <width>65</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>150</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="Line" name="line1_3_7">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>350</y>
+       <width>415</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background-color: rgb(116, 118, 120);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_TrafficBtn">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>80</y>
+       <width>86</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+background-color: #304961;
+color: #FFFFFF;
+	font:18px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+     </property>
+     <property name="text">
+      <string>串口调试</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="m_AIMaintainanceTab">
+    <attribute name="title">
+     <string>页</string>
+    </attribute>
+    <widget class="QLabel" name="label1_3_8">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+color: rgb(96, 96, 96);
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>IP  地址</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_9">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+color: rgb(96, 96, 96);
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>网    关</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>260</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+color: rgb(96, 96, 96);
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>无线名称</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_12">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>310</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+color: rgb(96, 96, 96);
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>无线密码</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_IPAddress">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>70</y>
+       <width>256</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #304961;
+}
+QLineEdit:!enabled
+{
+font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #6C8193;
+}</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_Gateway">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>120</y>
+       <width>256</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #304961;
+}
+QLineEdit:!enabled
+{
+font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #6C8193;
+}</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_SSID">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>260</y>
+       <width>256</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #304961;
+}
+QLineEdit:!enabled
+{
+font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #6C8193;
+}</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_SSIDPassword">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>310</y>
+       <width>256</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #304961;
+}
+QLineEdit:!enabled
+{
+font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #6C8193;
+}</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_NetworkTestingBtn">
+     <property name="geometry">
+      <rect>
+       <x>179</x>
+       <y>355</y>
+       <width>100</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+background-color: #304961;
+color: #FFFFFF;
+	font: 18px Semhei;
+	border: 1px solid #C0C0C0; 
+	border-right-color: white;
+ 	border-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+     </property>
+     <property name="text">
+      <string>测试网络</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_NetworkSaveBtn">
+     <property name="geometry">
+      <rect>
+       <x>299</x>
+       <y>355</y>
+       <width>100</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+background-color: #304961;
+color: #FFFFFF;
+	font: 18px Semhei;
+	border: 1px solid #C0C0C0; 
+	border-right-color: white;
+ 	border-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #304961;
+color: #FFFFFF; 
+}</string>
+     </property>
+     <property name="text">
+      <string>保存</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="m_Mask">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>170</y>
+       <width>256</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #304961;
+}
+QLineEdit:!enabled
+{
+font:16px Semhei;
+border:1px solid #e1e0e0;
+background-color: transparent;
+color: #6C8193;
+}</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_10">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>66</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Semhei</family>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+color: rgb(96, 96, 96);
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>子网掩码</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_WIFISwitch">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>215</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	border-radius: 15px;
+	image: url(:/images/pic_Close.png);
+}
+
+QPushButton:checked
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	image: url(:/images/pic_Open.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="m_WIFIMsg">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>225</y>
+       <width>116</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+color: rgb(96, 96, 96);
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>使用无线网络</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_SmartoNetSettingsBtn">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>20</y>
+       <width>86</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>BTN_01</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+background-color: #304961;
+color: #FFFFFF;
+	font:18px Semhei;
+	border: 1px solid #C0C0C0; 
+ 	border-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #304961;
+color: #FFFFFF;
+}</string>
+     </property>
+     <property name="text">
+      <string>智能设置</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_SmartoNetSwitchBtn">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>20</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	border-radius: 15px;
+	image: url(:/images/pic_Close.png);
+}
+
+QPushButton:checked
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	image: url(:/images/pic_Open.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label1_3_3">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>20</y>
+       <width>156</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+color: rgb(96, 96, 96);
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>SmartoNet智能服务</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="m_DHCPSwitch">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>215</y>
+       <width>60</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	border-radius: 15px;
+	image: url(:/images/pic_Close.png);
+}
+
+QPushButton:checked
+{
+	font: bold 12pt &quot;Arialial&quot;;
+	image: url(:/images/pic_Open.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="m_DHCPLabel">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>225</y>
+       <width>131</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>LBL_02</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-width: 0px;
+color: rgb(96, 96, 96);
+background-color: transparent;
+color: #304961;</string>
+     </property>
+     <property name="text">
+      <string>自动获取IP地址</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="m_IntroductionLab">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>427</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="aihide01_btn">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>126</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:pressed
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:hover
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:released
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:toggled
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:clicked
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="aihide02_btn">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>10</y>
+       <width>131</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:pressed
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:hover
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:released
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:toggled
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:clicked
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="aihide03_btn">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>330</y>
+       <width>121</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:pressed
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:hover
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:released
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:toggled
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:clicked
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="aihide04_btn">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>325</y>
+       <width>131</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:pressed
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:hover
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:released
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:toggled
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}
+QPushButton:clicked
+{
+	background: transparent;
+	border:0px;
+	border-radius:0px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>aihide01_btn</zorder>
+    <zorder>aihide02_btn</zorder>
+    <zorder>aihide04_btn</zorder>
+    <zorder>aihide03_btn</zorder>
+    <zorder>m_IntroductionLab</zorder>
+    <zorder>label1_3_8</zorder>
+    <zorder>label1_3_9</zorder>
+    <zorder>label1_3_11</zorder>
+    <zorder>label1_3_12</zorder>
+    <zorder>m_IPAddress</zorder>
+    <zorder>m_Gateway</zorder>
+    <zorder>m_SSID</zorder>
+    <zorder>m_SSIDPassword</zorder>
+    <zorder>m_NetworkTestingBtn</zorder>
+    <zorder>m_NetworkSaveBtn</zorder>
+    <zorder>m_Mask</zorder>
+    <zorder>label1_3_10</zorder>
+    <zorder>m_WIFISwitch</zorder>
+    <zorder>m_WIFIMsg</zorder>
+    <zorder>m_SmartoNetSettingsBtn</zorder>
+    <zorder>m_SmartoNetSwitchBtn</zorder>
+    <zorder>label1_3_3</zorder>
+    <zorder>m_DHCPSwitch</zorder>
+    <zorder>m_DHCPLabel</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CQComboBox</class>
+   <extends>QComboBox</extends>
+   <header>cqcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../res_yz.qrc"/>
+ </resources>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>5</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>5</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

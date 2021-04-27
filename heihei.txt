@@ -1,6 +1,0 @@
-QFrame#frame
-{
-    background-color: transparent;
-    border-image:url(:/images/title_background_02.png);
-    color: #FFFFFF;
-}

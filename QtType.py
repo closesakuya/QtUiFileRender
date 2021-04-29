@@ -57,7 +57,7 @@ class QtStyleSheet(dict):
         s = ""
         for k, v in self.items():
             if isinstance(v, dict):
-                if self.__abs_key.get(k, None) is True:
+                if self.__abs_key.get(k, None) is True or v.__len__() == 0:
                     continue
                 s += "{0}\n{{\n".format(k)
                 for sub_k, sub_v in v.items():
@@ -73,7 +73,6 @@ class QtStyleSheet(dict):
                 f.write(self.to_string())
         except Exception as e:
             print("dump Qt stylesheet failed ", e)
-
 
 
 class QtUiObject:

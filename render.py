@@ -33,8 +33,8 @@ class Render:
         qt_obj.dump(dst)
         return True
 
-
-    def render_stylesheet_by_format(self, obj: QtType.QtUiObject, obj_marker: str,
+    @staticmethod
+    def render_stylesheet_by_format(obj: QtType.QtUiObject, obj_marker: str,
                                     fmt_style: str, marker_key: str = "whatsThis"):
         fmt_style = QtType.QtStyleSheet(fmt_style)
 

@@ -27,7 +27,7 @@ def get_valid_dir_name(dir_input: str):
 
 def yield_all_ui(dir_name: str, current_dir: str = ""):
     for item in os.listdir(dir_name):
-        print(item, os.path.isfile(item))
+        # print(item, os.path.isfile(item))
         if os.path.isdir(item):
             current_dir += (item + os.sep)
             for sub_item in yield_all_ui(item, current_dir):

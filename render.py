@@ -55,7 +55,7 @@ class Render:
                         continue
                     inst_style[k] = v
                 else:
-                    raise Exception("not support type")
+                    raise Exception("not support type {0} of {1}".format(type(v), k))
 
             item.styleSheet.set("string", inst_style.to_string())
 

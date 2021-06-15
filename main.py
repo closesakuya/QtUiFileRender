@@ -41,7 +41,7 @@ def yield_all_ui(dir_name: str, current_dir: str = ""):
 
 @click.command()
 @click.option('--file_name', prompt='import your file_name to render')
-@click.option('--stylesheet', default="rander_strategy_01.py", help='your stylesheet(.py file) use to render')
+@click.option('--stylesheet', default="render_strategy_01.py", help='your stylesheet(.py file) use to render')
 @click.option('--output', default="", help='where to output you result')
 def renderfile(file_name: str, stylesheet: str, output: str):
     click.echo('render a file : {0} use stylesheet: {1}'.format(file_name, stylesheet))
@@ -71,7 +71,7 @@ def renderfile(file_name: str, stylesheet: str, output: str):
 @click.command()
 @click.option('--file_dir', prompt='import your files_dir to render, '
                                    'will render all .ui files in this dir')
-@click.option('--stylesheet', default="rander_strategy_01.py", help='your stylesheet(.py file) use to render')
+@click.option('--stylesheet', default="render_strategy_01.py", help='your stylesheet(.py file) use to render')
 @click.option('--output', default="", help='where to output you result')
 def renderall(file_dir: str, stylesheet: str, output: str):
     click.echo("render all files in : {0} use stylesheet: {1}".format(file_dir, stylesheet))

@@ -100,6 +100,7 @@ class QtUiObject:
 
     def to_bs4element(self):
         return self.__tag
+
     def __str__(self):
         return self.__tag.__str__()
 

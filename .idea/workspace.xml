@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d22d55c7-a499-4166-8c57-225c55a9537f" name="Default Changelist" comment="" />
+    <list default="true" id="d22d55c7-a499-4166-8c57-225c55a9537f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ExcelFilter.git" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -92,25 +94,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="245" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619514215596">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1631067350531">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="245" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1619514215596" />
-    <state width="1500" height="192" key="GridCell.Tab.0.bottom" timestamp="1619591532788">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1500" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1619591532788" />
-    <state width="1500" height="192" key="GridCell.Tab.0.center" timestamp="1619591532787">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1500" height="192" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1619591532787" />
-    <state width="1500" height="192" key="GridCell.Tab.0.left" timestamp="1619591532785">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1500" height="192" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1619591532785" />
-    <state width="1500" height="192" key="GridCell.Tab.0.right" timestamp="1619591532788">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1500" height="192" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1619591532788" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1631067350531" />
   </component>
 </project>

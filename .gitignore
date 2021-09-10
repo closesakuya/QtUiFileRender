@@ -1,5 +1,6 @@
 *.ui
 __pycache__
+.idea
 my_result
 build
 dist
